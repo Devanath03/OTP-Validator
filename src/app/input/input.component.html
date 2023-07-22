@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>OTP VALIDATOR</h1>
+    <div class="container">
+        <div class="group">
+            <input type="text" class="input" [(ngModel)]="number" required="true" />
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Enter your Mobile Number</label>
+          </div>
+        <button type="submit" class="btn" (click)="send()" style="--clr:#053a5f"><span>SEND</span><i></i></button>
+       <!-- <p>{{number}}</p> -->
+    </div>
+</body>
+</html>

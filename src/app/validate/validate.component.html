@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Your 5 Digit OTP</h1>
+  
+        <form class="form">
+  
+          <div class="input_field_box">
+            <!--#txt1.....#txt5 are id variables-->
+            <input type="text" #txt1 maxlength="1" [(ngModel)]="text1"  [ngModelOptions]="{standalone: true}"  (keyup) ="move($event, '', txt1, txt2)"/>
+            <input type="text" #txt2 maxlength="1" [(ngModel)]="text2"  [ngModelOptions]="{standalone: true}"  (keyup) ="move($event, txt1, txt2, txt3)"/>
+            <input type="text" #txt3 maxlength="1" [(ngModel)]="text3"  [ngModelOptions]="{standalone: true}"  (keyup) ="move($event, txt2, txt3, txt4)"/>
+            <input type="text" #txt4 maxlength="1" [(ngModel)]="text4"  [ngModelOptions]="{standalone: true}"  (keyup) ="move($event, txt3, txt4, txt5)"/>
+            <input type="text" #txt5 maxlength="1" [(ngModel)]="text5"  [ngModelOptions]="{standalone: true}"  (keyup) ="move($event, txt4, txt5, '')"/>
+          </div>
+  
+          <button (click)="verify()">Verify OTP</button>
+        </form>
+  
+      </div>
+    <!-- <button (click)="verify()">verify</button>
+    <p>{{number}}</p> -->
+</body>
+</html>
