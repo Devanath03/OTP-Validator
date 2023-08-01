@@ -12,7 +12,7 @@ def send_sms(from_number, to_number):
     
     message = f"Your OTP number: {random_number}"
 
-    client = vonage.Client(key="58e7f407", secret="xM8dQhScGeGRnXtD")
+    client = vonage.Client(key="", secret="")  # my client key and secret 
     
     sms = vonage.Sms(client)
     
