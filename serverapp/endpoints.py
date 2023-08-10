@@ -57,12 +57,12 @@ def project_api_routes(endpoints):
         resp = {}
         try:
             mobile_number = request.form['number']
-            # Set your Nexmo API credentials and phone numbers
+
             from_number = "919487128593"
 
             to_number = "91"+mobile_number
 
-            # Call the send_sms function to send the SMS
+            # Calling send_sms function to send the SMS
             otp = send_sms(from_number, to_number)
 
             req_body = {
