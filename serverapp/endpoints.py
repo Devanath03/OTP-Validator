@@ -151,7 +151,7 @@ def project_api_routes(endpoints):
                 resp["data"] = False
         
         except Exception as e:
-            print(e)
+            print(e+"error")
             status = {
             "statusCode":"400",
             "statusMessage":str(e)
