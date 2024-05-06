@@ -71,9 +71,7 @@ export class InputComponent implements OnInit{
       return true;
     } 
     else {
-
       console.log('Invalid mobile number');
-
       return false;
     }
   }
