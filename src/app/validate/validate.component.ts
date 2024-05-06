@@ -79,7 +79,7 @@ export class ValidateComponent implements OnInit{
   Validate():boolean
   {
     this.otp = this.text1+this.text2+this.text3+this.text4+this.text5;
-    //console.log(this.otp); //for seeing in web console
+    //console.log(this.otp); for seeing in web console
     const symbol = /^[0-9]+$/.test(this.otp);
     if(symbol)
     {
