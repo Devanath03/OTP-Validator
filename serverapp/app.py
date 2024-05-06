@@ -1,7 +1,7 @@
 from flask import Flask, Blueprint, jsonify
 from flask_cors import CORS
 
-from serverapp.endpoints import project_api_routes
+from endpoints import project_api_routes
 
 from flask import Flask, jsonify, request
 from flask_pymongo import PyMongo
@@ -11,7 +11,7 @@ from werkzeug.serving import run_simple
 
 def create_app():
     web_app = Flask(__name__)  
-    CORS(web_app)
+    CORS(web_app) 
 
     api_blueprint = Blueprint('api_blueprint', __name__)
     api_blueprint = project_api_routes(api_blueprint)
